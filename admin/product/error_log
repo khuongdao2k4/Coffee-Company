@@ -1,0 +1,166 @@
+[27-Jun-2025 22:55:36 Asia/Ho_Chi_Minh] SQL Error in executeSingleResult - get_result():  | SQL: SELECT * FROM product WHERE id = ?
+[27-Jun-2025 22:59:14 Asia/Ho_Chi_Minh] SQL Error in executeSingleResult - get_result():  | SQL: SELECT * FROM product WHERE id = ?
+[28-Jun-2025 08:03:23 Asia/Ho_Chi_Minh] SQL Error in executeResult(): This version of MariaDB doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery' | SQL: 
+                    SELECT 
+                        p.id, 
+                        p.title, 
+                        p.thumbnail, 
+                        p.content, 
+                        p.id_category, 
+                        ps.size, 
+                        ps.price,
+                        c.name AS category_name
+                    FROM 
+                        product p
+                    LEFT JOIN product_size ps ON p.id = ps.product_id  -- JOIN với bảng product_size
+                    LEFT JOIN category c ON p.id_category = c.id  -- JOIN với bảng category
+                    WHERE p.id IN (
+                        SELECT id FROM product LIMIT 0, 5
+                    )  -- Truy vấn con để phân trang sản phẩm
+                    ORDER BY p.id;
+                    
+[28-Jun-2025 08:53:01 Asia/Ho_Chi_Minh] [Start of script] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:53:01 Asia/Ho_Chi_Minh] [After includes] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:53:01 Asia/Ho_Chi_Minh] [Before product query] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:53:01 Asia/Ho_Chi_Minh] Fetching product with ID: 31
+[28-Jun-2025 08:53:01 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT * FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 08:53:01 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:05 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:06 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:07 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:53:08 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 08:53:09 Asia/Ho_Chi_Minh] [Start of script] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:53:09 Asia/Ho_Chi_Minh] [After includes] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:53:09 Asia/Ho_Chi_Minh] [Before product query] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:53:09 Asia/Ho_Chi_Minh] Fetching product with ID: 46
+[28-Jun-2025 08:53:09 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT * FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 08:53:09 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:56:20 Asia/Ho_Chi_Minh] [Start of script] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:56:20 Asia/Ho_Chi_Minh] [After includes] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:56:20 Asia/Ho_Chi_Minh] [Before product query] Memory: 2.00MB, Peak: 2.00MB
+[28-Jun-2025 08:56:20 Asia/Ho_Chi_Minh] Fetching product with ID: 46
+[28-Jun-2025 08:56:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 08:56:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:56:56 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 08:56:56 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:57:19 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) as total FROM product
+[28-Jun-2025 08:57:19 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 08:57:19 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:11 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) as total FROM product
+[28-Jun-2025 09:07:11 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:11 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:16 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:16 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:16 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:16 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:17 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:19 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, id_category FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:20 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:22 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:22 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:22 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:22 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:22 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:22 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:23 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:24 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:24 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:24 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:24 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT COUNT(*) AS total FROM product
+[28-Jun-2025 09:07:24 Asia/Ho_Chi_Minh] Memory before query: 2.00MB
+[28-Jun-2025 09:07:24 Asia/Ho_Chi_Minh] Memory after query: 2.00MB
+[28-Jun-2025 09:07:25 Asia/Ho_Chi_Minh] executeSingleResult called with SQL: SELECT id, title, number, thumbnail, content, id_category, created_at, updated_at FROM product WHERE id = ? LIMIT 1
+[28-Jun-2025 09:07:25 Asia/Ho_Chi_Minh] Memory before query: 2.00MB

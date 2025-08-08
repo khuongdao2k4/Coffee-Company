@@ -1,0 +1,466 @@
+
+/* END MAIN TOP  */
+main{
+  padding-top: 200px;
+}
+
+main .container {
+  width: 90%;
+  margin: 0px auto;
+}
+main section.search-quan {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+}
+main section.search-quan i {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #676767;
+}
+main section.search-quan form{
+  width: 100%;
+}
+main section.search-quan input {
+  width: 90%;
+  padding: 15px 50px;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  background-color: #f7f7f7;
+}
+main #ant-layout section.main-layout {
+  padding: 2rem 0;
+  margin: 0px auto;
+  width: 100%;
+}
+main #ant-layout section.main-layout .row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 10px;
+}
+main #ant-layout section.main-layout .row .box a {
+  text-decoration: none;
+}
+main #ant-layout section.main-layout .row .box:hover {
+  filter: drop-shadow(8px 5px 10px gray);
+}
+main #ant-layout section.main-layout .row .box {
+  position: relative;
+}
+main #ant-layout section.main-layout .row .box p {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+main #ant-layout section.main-layout .row .box .bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+  border-radius: 5px;
+}
+main #ant-layout section.main-layout .row img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  /* filter:drop-shadow(8px 5px 10px gray); */
+}
+
+/* <!-- END LAYOUT  --> */
+/* THỰC ĐƠN */
+.product-recently .row .col {
+  width: 100%; /* Chiều rộng tự điều chỉnh */
+  max-width: 300px; /* Đặt kích thước tối đa */
+  min-height: 350px; 
+  height: auto; 
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  padding: 10px;
+}
+.product-recently .row.col:hover{
+ 
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  
+}
+.product-recently .col img {
+  width: 100%; /* Chiều rộng đầy đủ */
+  height: 180px; /* Đặt chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Cắt hình ảnh vừa với khung */
+  margin-bottom: 10px;
+}
+.product-recently .col img {
+  width: 100%; /* Chiều rộng đầy đủ */
+  height: 180px; /* Đặt chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Cắt hình ảnh vừa với khung */
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+.product-recently .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động điều chỉnh cột */
+  gap: 20px; /* Khoảng cách giữa các ô */
+}
+@media screen and (max-width: 768px) {
+  .product-recently .row {
+    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 sản phẩm trên hàng */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-recently .row {
+    grid-template-columns: 1fr; /* Hiển thị 1 sản phẩm trên hàng */
+  }
+}
+
+section.main {
+  padding: 2rem 0;
+  width: 100%;
+  margin: 0px auto;
+}
+section.main a {
+  text-decoration: none;
+}
+section.main section.recently {
+  padding-bottom: 1rem;
+}
+section.main section.recently .link a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+section.main section.recently .title h1 {
+  font-size: 35px;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  font-weight: bold;
+}
+section.main section.recently .product-recently {
+  padding-top: 2rem;
+}
+
+section.main section.recently .product-recently .row {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+section.main section.recently .product-restaurants .row .col:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+section.main section.recently .product-recently .row .col img {
+  width: 100%;
+  border-radius: 10px;
+}
+section.main section.recently .product-recently .row .col img.thumbnail {
+  border: none;
+ 
+}
+section.main section.recently .product-recently .row .col img.thumbnail:hover {
+  box-shadow: 0px 0px 5px 0px grey;
+}
+section.main section.recently .product-recently .row .col .title p {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0px;
+  margin: 5px 0;
+  color: black;
+  font-family: "Encode Sans SC", sans-serif;
+}
+section.main section.recently .product-recently .row .col .price span {
+  padding: 10px 0;
+  color: #676767;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(207, 16, 16, 0.815);
+  font-family: "Bebas Neue", cursive;
+}
+section.main section.recently .product-recently .row .col .dish span {
+  padding: 10px 0;
+  color: #676767;
+}
+
+/* END THỰC ĐƠN  */
+
+section.main section.restaurants {
+  padding: 3rem 0;
+}
+
+section.main section.restaurants .link a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+section.main section.restaurants .title h1 {
+  font-size: 35px;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  font-weight: bold;
+}
+
+section.main section.restaurants .product-restaurants {
+  margin-top: 20px;
+  padding-top: 2rem;
+  background-color: #f7f7f7;
+  padding-bottom: 20px; 
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 2rem;
+  padding-right:2rem ;
+}
+section.main section.restaurants .product-restaurants .row  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:30px;
+  justify-items: center;
+  box-sizing: border-box;  /* Đảm bảo các phần tử không bị tràn */
+  margin: 0 auto;  
+}
+section.main section.restaurants .product-restaurants .row .col img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  
+}
+section.main section.restaurants .product-restaurants .row .col{
+  background-color: #fff; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.2s ease, box-shadow 0.3s ease; 
+  border:none;
+  padding-bottom: 20px;
+  transition: all 0.3s ease;
+  text-align: center;
+  overflow: hidden;  /* Đảm bảo sản phẩm không bị tràn ra ngoài */
+  width: 100%;
+  box-sizing: border-box;
+}
+section.main section.restaurants .product-restaurants .row .col:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+section.main section.restaurants .product-restaurants .row .col img.thumbnail {
+  border: 1px solid rgb(76, 78, 85);
+  transition: 0.1s;
+  border:none;
+  margin-top: 10px;
+}
+section.main
+  section.restaurants
+  .product-restaurants
+  .row
+  .col
+  img.thumbnail:hover {
+  box-shadow: 0px 0px 5px 0px grey;
+}
+
+section.main section.restaurants .product-restaurants .row .col .title p {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0px;
+  margin: 5px 0;
+  color: rgb(43, 31, 31);
+  font-family: "Encode Sans SC", sans-serif;
+  text-align: center;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500;600;700&display=swap");
+
+section.main section.restaurants .product-restaurants .row .col .price span {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(207, 16, 16, 0.815);
+  font-family: "Bebas Neue", cursive;
+ 
+}
+.pagination{
+  margin: 0px auto;
+  padding-top: 2rem;
+}
+.pagination ul{
+  display: flex;
+  list-style: none;
+  /* justify-content: center; */
+}
+.pagination ul li{
+  background-color: burlywood;
+  margin: 0px 5px;
+  border-radius: 2px;
+  padding: 5px;
+}
+.pagination ul li a{
+  padding: 20px 10px;
+  color: white;
+  font-weight: 500;
+}
+/* end main  */
+footer {
+  background-color:rgb( 190,165,134);
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 1rem;
+}
+footer .container {
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: column;
+}
+footer .container .logo {
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+} 
+footer .container .link {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 30px 0;
+  border-bottom: 1px solid white;
+}
+footer .container .link .col a:hover{
+  cursor: pointer;
+  color: rgb(224, 247, 222);
+}
+footer .container .link .col a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 0;
+  font-family: "Encode Sans SC", sans-serif;
+}
+footer .container .link .icon a{
+  padding: 10px 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+footer .container .link .icon a i{
+  font-size: 40px;
+}
+footer .container .link .col {
+  display: flex;
+  flex-flow: column;
+}
+footer .container .link .icon {
+  display: flex;
+}
+footer .container .bottom{
+  padding: 20px 0;
+}
+/* Thực đơn */
+.product-recently .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.product-recently .col {
+  width: 24%; /* Chiều rộng của mỗi sản phẩm, có thể điều chỉnh để phù hợp */
+  margin-bottom: 20px; /* Khoảng cách giữa các sản phẩm */
+  box-sizing: border-box;
+}
+
+
+.product-recently .col a {
+  display: block;
+  text-align: center; /* Căn giữa nội dung trong mỗi mục sản phẩm */
+  /* background-color: #f9f9f9; */
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+/* Cải thiện hình ảnh thumbnail */
+.product-recently .col img.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Đảm bảo văn bản title và giá được căn chỉnh đẹp */
+.product-recently .col .title {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.product-recently .col .price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Thêm hiệu ứng hover cho mục sản phẩm */
+.product-recently .col a:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Đảm bảo tất cả các phần tử trong row được đều và không bị vỡ layout */
+.product-recently .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Khoảng cách giữa các cột */
+}
+
+
+@media (max-width: 1024px) {
+  /* Trên màn hình nhỏ hơn, giảm kích thước sản phẩm */
+  .product-recently .col {
+      width: 48%; /* Hiển thị 2 cột */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Trên màn hình di động, giảm kích thước hơn nữa */
+  .product-recently .col {
+      width: 100%; /* Hiển thị 1 cột */
+  }
+}
+/* chương trình */
+.program-carousel {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.program-carousel .carousel-inner {
+  border-radius: 10px;  /* Bo góc các ảnh */
+}
+
+.program-carousel .carousel-item img {
+  width: 100%;  /* Đảm bảo ảnh hiển thị đầy đủ */
+  height: 400px; /* Đặt chiều cao cho ảnh */
+  object-fit: cover;  /* Cắt ảnh cho phù hợp với khung */
+}
+.left-align {
+  text-align: left;
+  margin-left: 15px;  /* Điều chỉnh khoảng cách nếu cần */
+  font-size: 35px;  /* Tùy chỉnh kích thước chữ nếu cần */
+  font-weight: bold;  
+  margin-top: 30px;
+}
+
+

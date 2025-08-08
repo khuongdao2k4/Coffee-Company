@@ -1,0 +1,15 @@
+[28-Jun-2025 19:15:01 Asia/Ho_Chi_Minh] SQL Error in executeResult(): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''' at line 1 | SQL: select * from category where id=3'
+[28-Jun-2025 19:15:01 Asia/Ho_Chi_Minh] SQL Error in executeResult(): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''
+            GROUP BY p.id
+            LIMIT 0, 12' at line 8 | SQL: 
+            SELECT 
+                p.id, 
+                p.title, 
+                p.thumbnail, 
+                MIN(ps.price) AS price 
+            FROM product p
+            LEFT JOIN product_size ps ON p.id = ps.product_id
+            WHERE p.id_category = 3'
+            GROUP BY p.id
+            LIMIT 0, 12
+            
